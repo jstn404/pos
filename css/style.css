@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color:#0b0004;
+  --secondary-color:#ededed;
+  --green: rgb(6, 146, 76);
+}
+
+body{
+  overflow: hidden; 
+}
+
+html, body, button {
+  font-size: 16px; 
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: var(--primary-color); 
+  background-color: var(--secondary-color);
+}
+
+.home{
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.header{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  width: 50px;
+  text-align: center;
+}
+
+.logout{
+  color: var(--secondary-color);
+}
+
+.admin {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+  padding-right: 1rem;
+}
+
+.name{
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.content{
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  border-radius: 8px;
+  height: 650px;
+}
+
+.button-div{
+  padding: 0 25px;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.payment-list{ 
+  height: 100%;
+  gap: 25px;
+  background-color: white; 
+  overflow: auto; /* Enables scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.list,
+.item{
+  height: 100%;
+  border-radius: 4px;
+}
+
+.pay{
+  background-color: var(--green); 
+  color: var(--secondary-color);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.button{
+  display: flex;
+  justify-content: end;
+
+}
+
+.cancel{
+  border: solid 1px rgb(171, 9, 9);
+  color: rgb(171, 9, 9);
+  padding: 12px 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.transac{
+  margin-right: 25px;
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
+  padding: 12px 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.item-list{
+  height: 100%;
+  flex-direction: row;
+  background-color: white; 
+  overflow: auto; /* Enables scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.item-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.category{
+  background-color: white; 
+}
+
+.item-nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  background-color: white;
+  width: 62%;
+}
+
+.add{
+  color: var(--green);
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: solid 1px var(--primary-color);
+  padding: 2px 1rem;
+  border-radius: 20px;
+}
+
+/* Style the button inside the dropdown */
+.dropdown-button {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.checkout{
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-modal:hover {
+  background-color: #45a049;
+}
+
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
+  gap: 20px;
+  padding-top: 4rem;
+}
+
+.product {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.product:hover,
+.pay:hover,
+.cancel:hover,
+.transac:hover {
+  transform: scale(1.05); /* Scale up the element by 20% */
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+#subTotal,
+#tax,
+#total{
+  float: right;
+}
+
+.tax{
+  color: var(--green);
+}
+
+.cal{
+  position: absolute;
+  bottom: 6.8rem;
+  margin-left: 4px;
+  width: 480px;
+  background-color: #f9f9f9;
+  z-index: 5;
+  padding: 25px;
+  line-height: 35px;
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.list{
+  padding: 0 25px;
+}
+
+.total{
+  font-size: 18px;
+  padding: 5px 0;
+}
